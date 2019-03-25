@@ -39,6 +39,18 @@ main {
 #houseImages { position:relative; width:4000px; transition: all .5s; }
 #houseImages img { float:left; }
 
+.house-info {
+	color: white;
+	margin-top: 20px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'GOT_ font';
+	line-height: 2;
+	letter-spacing: 1px;
+	text-align: justify;
+}
+
 #bottomNav { margin-top:30px; }
 
 #navList li {

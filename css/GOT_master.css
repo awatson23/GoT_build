@@ -31,12 +31,12 @@ main {
 #imageContainer {
 	width:600px;
 	height:360px;
-	background-color:grey;
+	background-color: grey;
 	margin:0 auto;
-	/*overflow:hidden;*/
+	overflow:hidden;
 }
 
-#houseImages { position:relative; width:4000px; transition: all .5s; }
+#houseImages { position:relative; width:4000px; /*transition: all .5s;*/ }
 #houseImages img { float:left; }
 
 #bottomNav { margin-top:30px; }
@@ -46,6 +46,11 @@ main {
 	list-style-type:none;
 	padding:0px 10px;
 	cursor:pointer;
+}
+
+.hidden
+{
+	display:none;
 }
 
 /* ----- end default styles ----- */
@@ -98,22 +103,58 @@ main {
 
 /* add styles here for lightbox and video */
 
-.lightbox {
+.lightbox
+{
 	position: absolute;
-	text-align: center;
 	width: 100%;
 	top: 0;
-	background-color: rgba(0,0,0,0.9);
+	background-color: rgb(0, 0, 0, 0.5);
 	height: 100%;
+	text-align: center;
 	display: none;
 }
 
-.lightbox-on {
+.lightbox-on{
 	display: block;
 }
+
+.lightbox-close
+{
+	position: absolute;
+	color: white;
+	font-size: 2rem;
+	right: 12px;
+	top: 12px;
+	cursor: pointer;
+}
+
+
 
 video {
 	width: 80%;
 	margin-top: 10%;
 	border: thin solid #949393;
+
 }
+
+
+
+.house-info
+{
+	color: #fff;
+	font-size: 18px;
+	margin: 0 auto;
+	width: 65%;
+	text-align: center;
+	line-height: 1.5;
+	margin-top: 10px;
+}
+
+.house-name
+
+{
+	letter-spacing: 3px;
+}
+
+
+

@@ -11,17 +11,7 @@
 	      houseInfo = document.querySelector(".house-info");
 
 
-	      
-           
-
-
-
-	      //Mulitdementional array
-	      // Future Reference
-	      //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-	     
-
-	      const houseData =[
+	       const houseData =[
 	      [`STARK`, `STARK
 		House Stark of Winterfell is a Great House of Westeros, ruling over the vast region known as the North from their seat in Winterfell. It is one of the oldest lines of Westerosi nobility by far, claiming a line of descent stretching back over eight thousand years. Before the Targaryen conquest, as well as during the War of the Five Kings and Daenerys Targaryen's invasion of Westeros, the leaders of House Stark ruled over the region as the Kings in the North.`],
 		[`BARATHEON`,
@@ -48,19 +38,9 @@
 
 	      function openLightbox(){
 	      	//debugger;
-	      	// split helps to get to the right class
-	      	
-	      	// FOR FUTURE REFERENCE 
-	      	//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
-	      	 
-
-	      	 // this gives us back house name => the second class in all the shields ie stark, lanister...
-	      	 // flip ths to uppercase
+	
 	      	let targetVid = targetHouse.charAt(0).toUpperCase() + targetHouse.slice(1);
-
-	      	//tagline.textContent = `House ${targetVid}`; code from  the first example
-	      	//houseinfo.textContent = houseData [0]; code from the first example
-
+	
 	      	 video.src = `video/House-${targetVid}.mp4`;
 	      	 lightbox.classList.add('lightbox-on');
 	      	 video.load();
@@ -75,60 +55,24 @@
 
 
 	      function animateBanners() {
-	      	// move the banners to the left so that the current house banner is visible 
-
-	      	// grab the data-offset njmbe from the shield we're clicking on
-	      	// 
+	  
 	      	const offSet = 600;
 	      	let currentOffset = this.dataset.offset * offSet;
 	      	TweenMax.to(topBanners, 1, {right: currentOffset});
-	      	// move the banners using the right css property
+	      	
  
 	       targetHouse = this.className.split(" ")[1]; 
 	      	topBanners.style.right = currentOffset + "px";
 
 	 
-
-	    
-	      	 
-	     	
-	      	//tagline.textContent = `House ${houseData[0][0]}`;
-	      	//houseInfo.textContent = houseData[0][1];
-            
-
-	      	// listening to the event in the animateBanners to open up video for each shield
-	      	//but it allows to play the video just from second click
-
-	      	sigils.forEach(sigil => sigil.addEventListener("click", openLightbox));
+				sigils.forEach(sigil => sigil.addEventListener("click", openLightbox));
 
 
-	  
-	       
-
-	      	//changing the headline and text for each house when clicking on the shield
-	      	//providing the access to the custom data, changing content per house
-
-	      	//FOR FUTURE REFERENCE https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset
-	      	tagline.textContent = `House ${houseData[this.dataset.offset][0]}`;
-		    houseInfo.textContent = houseData[this.dataset.offset][1];
+	     tagline.textContent = `House ${houseData[this.dataset.offset][0]}`;
+		 houseInfo.textContent = houseData[this.dataset.offset][1];
 
 
-
-   
 	    }
-
-	
-
-	    
-
-        //setTimeout(delay, 3000);
-        // function delay(){
-        // 	console.lgo( ' delay works');
-        // 	openLightbox();
-        // 
-
-        //topBanners.addEventListener("transitioned", delay);
-
 
 	      sigils.forEach(sigil => sigil.addEventListener("click", animateBanners));
 	      

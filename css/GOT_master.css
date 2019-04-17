@@ -1,15 +1,13 @@
 @charset "UTF-8";
 
-/* ----- custom font ----- */
+
 @font-face {
     font-family: 'GOT_font';
     src: url('Game_of_Thrones.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-/* ----- end custom font ----- */
 
-/* ----- default styles ----- */
 body { background-image:url(../images/grungeBG.jpg);
 	background-repeat:no-repeat; background-position:center center;
 	background-color:#000000; font-size:16px; }
@@ -53,9 +51,7 @@ main {
 	display:none;
 }
 
-/* ----- end default styles ----- */
 
-/* ----- image sprite ----- */
 .sigil-container {
 	width:51px;
 	height:54px;
@@ -85,29 +81,14 @@ main {
 
 .arryn { background-position:-253px -54px; }
 .arryn:hover { background-position:-253px 0px; }
-/* ----- end image sprite ----- */
 
-/* ----- classes for transitions ----- */
 
-.scaleUp {
-	-moz-transform:scale(1.7, 1.7);
-	-webkit-transform:scale(1.7, 1.7);
-	transform:scale(1.7, 1.7);
-}
-
-.scaleHalfUp {
-	-moz-transform:scale(1.2, 1.2);
-	-webkit-transform:scale(1.2, 1.2);
-	transform:scale(1.2, 1.2);
-}
-
-/* add styles here for lightbox and video */
 
 .lightbox
 {
 	position: absolute;
 	width: 100%;
-	top: 0;
+	top: 0px;
 	background-color: rgb(0, 0, 0, 0.5);
 	height: 100%;
 	text-align: center;
@@ -142,11 +123,12 @@ video {
 .house-info
 {
 	color: #fff;
-	font-size: 18px;
+	font-family: 'GOT_font';
+	font-size: 12px;
 	margin: 0 auto;
-	width: 65%;
+	width: 45%;
 	text-align: center;
-	line-height: 1.5;
+	line-height: 2;
 	margin-top: 10px;
 }
 
@@ -154,6 +136,7 @@ video {
 
 {
 	letter-spacing: 3px;
+	font-weight: bold;
 }
 
 
